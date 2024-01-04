@@ -1,0 +1,7 @@
+<!-- employee_confirm_delete.html -->
+<h2>Delete Employee</h2>
+<p>Are you sure you want to delete {{ employee.name }}?</p>
+<form method="post" action="{% url 'employee_delete' pk=employee.pk %}">
+  {% csrf_token %}
+  <button type="submit">Confirm Delete</button>
+</form>
